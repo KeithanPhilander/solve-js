@@ -5,22 +5,25 @@ export const ToggleModule = () => {
     console.log('checking toggle...');
 
     // select elements
-    const toggleText = document.querySelector(".toggle-text");
     const toggleButton = document.querySelector(".toggle-button");
+    const toggleText = document.querySelector(".toggle-text");
 
-    // toggle function
-    const toggle = () => {
-        if(toggleText.textContent === "OFF") {
-            toggleText.textContent = "ON";
-            toggleText.classList.add("on");
-        } else {
-            toggleText.textContent = "OFF";
-            toggleText.classList.remove("on");
-        }
-    }
+    // counter to alternate between toggle states
+    let toggleCounter = 0;
 
     // events
-    toggleButton.addEventListener("click", toggle);
+    toggleButton.addEventListener("click", (e) => {
+        // increment counter
+        toggleCounter += 1;
+        if(toggleCounter === 1) {
+            toggleText.textContent = "ON"
+            toggleText.classList.add("on");
+        } else {
+            toggleCounter = 0;
+            toggleText.classList.remove("on");
+            toggleText.textContent = "OFF";
+        }
+    });
     
 }
 
