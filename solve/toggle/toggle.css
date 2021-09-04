@@ -17,3 +17,9 @@ You can use one or both classes
 }
 
 */
+
+.on {
+    color: teal;
+    border: 2px solid rgba(0, 187, 187, 0.7);
+    box-shadow: 1px 1px 20px rgba(0, 187, 187, 0.7);
+}
