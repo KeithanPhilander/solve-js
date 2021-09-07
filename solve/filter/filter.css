@@ -1,2 +1,11 @@
 
 /* filter task css aid/instructions coming soon */
+
+button span {
+    pointer-events: none;
+}
+
+
+.invisible {
+    display: none !important;
+}
