@@ -3,10 +3,11 @@ export const FilterModule = () => {
 
     //Write solution to the Filter task inside this FilterModule function.
 
-
+    // variables
     let currentBtn;
     let colors = [];
 
+    // app
     document.querySelectorAll(".btn").forEach(item => {
         item.addEventListener("click", (event) => {
             currentBtn = event.target;
@@ -15,52 +16,50 @@ export const FilterModule = () => {
         })
     })
 
+    //functions
+    // populate colors array
     const getColors = () => {
         document.querySelectorAll(".clr").forEach(item => {
             colors.push(item.id)
         })
     }
 
+    // clear all colors
+    const clear = (query) => {
+        document.querySelectorAll(query).forEach(item => {
+            item.classList.remove("invisible")
+        })
+    }
+
+    // filter one color
+    const filter = (query) => {
+        document.querySelectorAll(query).forEach(item => {
+            item.classList.add("invisible")
+        });
+    }
+
+
+    // filter all colors
     const filterColors = (currentBtn) => {
         if(currentBtn.id === "btn-all") {
             //clear
-            document.querySelectorAll(".clr").forEach(item => {
-                item.classList.remove("invisible")
-            })
+        clear(".clr")
         } else if(currentBtn.id === "btn-red") {
             //clear
-            document.querySelectorAll(".clr").forEach(item => {
-                item.classList.remove("invisible")
-            })
-            document.querySelectorAll("#yellow").forEach(item => {
-                item.classList.add("invisible")
-            });
-            document.querySelectorAll("#green").forEach(item => {
-                item.classList.add("invisible")
-            });
+            clear(".clr");
+            filter("#yellow");
+            filter("#green");
             
         } else if(currentBtn.id === "btn-yellow") {
             //clear
-            document.querySelectorAll(".clr").forEach(item => {
-                item.classList.remove("invisible")
-            })
-            document.querySelectorAll("#red").forEach(item => {
-                item.classList.add("invisible")
-            });
-            document.querySelectorAll("#green").forEach(item => {
-                item.classList.add("invisible")
-            });
+            clear(".clr");
+            filter("#red");
+            filter("#green")
         } else if(currentBtn.id === "btn-green") {
             //clear
-            document.querySelectorAll(".clr").forEach(item => {
-                item.classList.remove("invisible")
-            })
-            document.querySelectorAll("#yellow").forEach(item => {
-                item.classList.add("invisible")
-            });            
-            document.querySelectorAll("#red").forEach(item => {
-                item.classList.add("invisible")
-            });
+            clear(".clr");
+            filter("#yellow")           
+            filter("#red")
         }
     }
 
