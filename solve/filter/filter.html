@@ -5,22 +5,22 @@
     Not-allowed: You are not allowed to remove an html element or add extra 
                  html elements to or rearrange elements in the html code.
 -->
-<main class="pseudo-body">
+<main>
     <section>
-        <div>
-            <button class="btn" id="btn-all"><span>All</span> <span>Colors</span></button>
-            <button class="btn" id="btn-red"><span>Red</span> <span>Only</span></button>
-            <button class="btn" id="btn-yellow"><span>Yellow</span> <span>Only</span></button>
-            <button class="btn" id="btn-green"><span>Green</span> <span>Only</span></button>
+        <div class="options-group">
+            <button class="option active" data-name="all"><span>All</span> <span>Colors</span></button>
+            <button class="option" data-name="red"><span>Red</span> <span>Only</span></button>
+            <button class="option" data-name="yellow"><span>Yellow</span> <span>Only</span></button>
+            <button class="option" data-name="green"><span>Green</span> <span>Only</span></button>
         </div>
-        <div class="clr-group">
-            <div class="clr" id="red"><span>R</span><span>Red</span></div>
-            <div class="clr" id="red"><span>R</span><span>Red</span></div>
-            <div class="clr" id="green"><span>G</span><span>Green</span></div>
-            <div class="clr" id="yellow"><span>Y</span><span>Yellow</span></div>
-            <div class="clr" id="red"><span>R</span><span>Red</span></div>
-            <div class="clr" id="yellow"><span>Y</span><span>Yellow</span></div>
-            <div class="clr" id="green"><span>G</span><span>Green</span></div>
+        <div class="gallery">
+            <div class="item" data-name="red"><span>R</span><span>Red</span></div>
+            <div class="item" data-name="red"><span>R</span><span>Red</span></div>
+            <div class="item" data-name="green"><span>G</span><span>Green</span></div>
+            <div class="item" data-name="yellow"><span>Y</span><span>Yellow</span></div>
+            <div class="item" data-name="red"><span>R</span><span>Red</span></div>
+            <div class="item" data-name="yellow"><span>Y</span><span>Yellow</span></div>
+            <div class="item" data-name="green"><span>G</span><span>Green</span></div>
         </div>
     </section>
 </main>

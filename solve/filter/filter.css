@@ -6,7 +6,11 @@ button span {
 }
 
 
-.invisible {
-    display: none !important;
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
 }
 /* Add any relevant style here */
